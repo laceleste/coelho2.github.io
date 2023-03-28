@@ -63,12 +63,12 @@ function setup()
   if(isMobile){
     canW = displayWidth; 
     canH = displayHeight; 
-    createCanvas(displayWidth+80, displayHeight-50);
+    createCanvas(displayWidth+80, displayHeight);
   } 
   else {
     canW = windowWidth; 
     canH = windowHeight; 
-    createCanvas(windowWidth, windowHeight-50);
+    createCanvas(windowWidth, windowHeight);
   }
 
   
@@ -107,11 +107,11 @@ function setup()
   rope2 = new Rope(7,{x:370,y:40});
   rope3 = new Rope(4,{x:400,y:225});
 
-  ground = new Ground(200,canH-10,600,20);
+  ground = new Ground(200,canH,600,10);
   blink.frameDelay = 20;
   eat.frameDelay = 20;
 
-  bunny = createSprite(170,canH-180,100,100);
+  bunny = createSprite(170,canH-180,100,80);
   bunny.scale = 0.2;
 
   bunny.addAnimation('blinking',blink);
